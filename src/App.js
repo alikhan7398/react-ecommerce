@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./component/Navbar";
 import Home from "./component/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./component/Products";
 import Product from "./component/Product";
 import Cart from "./component/Cart";
@@ -15,14 +15,15 @@ import Login from "./component/Login";
 import About from "./component/About";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
-
+import ScrollToTop from "./component/ScrollToTop";
 function App() {
   return (
     <>
       <Router>
+      <ScrollToTop />
       <Navbar />
       <ToastContainer />
-      <div className="main-content">
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
@@ -33,7 +34,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      </div>
+      
       <Footer />
 
     </Router>

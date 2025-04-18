@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import { NavLink, useParams } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch  } from 'react-redux';
 import { addCart } from '../redux/handleCart';
 import { toast } from 'react-toastify';
 export default function Product() {
@@ -79,7 +79,7 @@ const ShowProduct = ()=> {
             onClick={() => addProduct(product)}>
               Add to Cart
             </button>
-            <NavLink to="/" className="btn btn-dark ms-2 px-3 py-2">
+            <NavLink to="/cart" className="btn btn-dark ms-2 px-3 py-2">
               Go to Cart
             </NavLink>
          </div>
